@@ -7,6 +7,12 @@
 
 EStage GameStage::eStage = EStage::GameLoop;
 
+GameStage::GameStage(std::shared_ptr<GameMode> _GM) : GM(_GM)
+{
+
+
+}
+
 void GameStage::SetInfo(std::shared_ptr<Player> ptrPl)
 {
     sText += "У игрока " + ptrPl->name + "\n";
@@ -32,9 +38,9 @@ void GameStage::GameLoop()
 
         SetInfo(GM->ptrPl);
 
-
-
-
+        #ifdef  RED
+            std::cout << sText;
+#endif    //  RED
 
 
     }

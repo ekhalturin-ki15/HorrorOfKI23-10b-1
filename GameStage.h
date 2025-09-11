@@ -15,15 +15,8 @@ enum EStage : __int8
 class GameStage
 {
 
+
 	std::string sText;
-
-	/*
-	template<typename T>
-	GameStage(T a)
-	{
-
-	}
-	*/
 
 	void SetInfo(std::shared_ptr<Player> ptrPl);
 
@@ -32,4 +25,6 @@ class GameStage
     void GameLoop();
 	std::shared_ptr<GameMode> GM;
 
+public:
+    GameStage(std::shared_ptr<GameMode> _GM);
 };

@@ -14,7 +14,8 @@ class GameMode
     std::ofstream logOut;
 
 public:
-    GameMode(std::shared_ptr<Player> _ptrPl, 
+
+    void Init(std::shared_ptr<Player> _ptrPl, 
         std::shared_ptr<GameStage> _ptrGS);
     // TSubObject
     std::shared_ptr<Player>    ptrPl;    // 8 Байт
