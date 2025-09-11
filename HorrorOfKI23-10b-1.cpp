@@ -1,11 +1,24 @@
-﻿// HorrorOfKI23-10b-1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿#include <iostream>
+#include <fstream>
+
+
+//openGl
 //
 
-#include <iostream>
 
 int main()
 {
+    std::ifstream in;
+    std::ofstream out;
+
+    in.open("input.txt");
+
+    out.open("output.txt");
+
+
     std::cout << "Hello World!\n";
+    out << "Hello World!\n";
+
 
 
 

@@ -1,2 +1,3 @@
-﻿  HorrorOfKI23-10b-1.cpp
+﻿cl : командная строка  warning D9002: пропуск неизвестного параметра "/std:c++23preview"
+  HorrorOfKI23-10b-1.cpp
   HorrorOfKI23-10b-1.vcxproj -> D:\acmp\HorrorOfKI23-10b-1\x64\Debug\HorrorOfKI23-10b-1.exe
