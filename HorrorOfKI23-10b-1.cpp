@@ -5,7 +5,12 @@
 
 using namespace std;
 
+#define PTR(x) std ::shared_ptr<x>
+
 int main()
 {
-    GameMode GM;
+    PTR(GameMode) GM;
+    PTR(GameStage) ptrGS = std::make_shared<GameStage>();
+    PTR(Player) ptrPl    = std::make_shared<Player>();
+    GM                   = std::make_shared<GameMode>(ptrGS, ptrPl);
 }
