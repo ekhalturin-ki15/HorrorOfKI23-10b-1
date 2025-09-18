@@ -19,7 +19,7 @@ public:
     GameMode() = default;
 
     void Init(Player* _ptrPl, 
-        GameStage* _ptrGS);
+        GameStage* _ptrGS, InputController* ptrIC);
     // TSubObject
     Player*    ptrPl;    // 8 Байт
     GameStage* ptrGS;

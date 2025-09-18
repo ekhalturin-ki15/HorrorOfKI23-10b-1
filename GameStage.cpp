@@ -25,6 +25,7 @@ void GameStage::SetInfo(Player* ptrPl)
 
 void GameStage::GameLoop()
 {
+    Clear();
     while (true)
     {
 
@@ -36,9 +37,10 @@ void GameStage::GameLoop()
         SetInfo(GM->ptrPl);
 
         std::cout << sText;
+        std::cout.flush();
 
-        GM->ptrIC;
-            
+        GM->ptrIC->Input();
+        
 
         Clear();
     }

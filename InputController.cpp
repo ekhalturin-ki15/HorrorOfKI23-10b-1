@@ -1,8 +1,7 @@
-#include "InputController.h"
+ï»¿#include "InputController.h"
 #include "GameMode.h"
 
 #define LINE "~~~~~~~~~~~~~~~~~~~~~\n"
-
 
 InputController::InputController(GameMode* _GM) : GM(_GM)
 {
@@ -10,22 +9,13 @@ InputController::InputController(GameMode* _GM) : GM(_GM)
 
 void InputController::InputInfo()
 {
-    sText += "Äëÿ î÷èñòêè ýêðàíà ââåäèòå '0' \n";
-    sText += "Ââåäèòå öåëü àòàêè \n";
+    sText += "Ð”Ð»Ñ Ð¾Ñ‡Ð¸ÑÑ‚ÐºÐ¸ ÑÐºÑ€Ð°Ð½Ð° Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ '0' \n";
+    sText += "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ»ÑŒ Ð°Ñ‚Ð°ÐºÐ¸ \n";
     sText += LINE;
 }
 
-
-
-
-
-
-
 void InputController::Input()
 {
-    sText = "";
     InputInfo();
-
-
-
+    std::cin >> iChose;
 }

@@ -1,5 +1,8 @@
 ﻿cl : командная строка  warning D9002: пропуск неизвестного параметра "/std:c++23preview"
+  Enemy.cpp
+  GameMode.cpp
   GameStage.cpp
-  InputController.cpp
+  HorrorOfKI23-10b-1.cpp
+  Player.cpp
   Создание кода...
   HorrorOfKI23-10b-1.vcxproj -> D:\acmp\HorrorOfKI23-10b-1\x64\Debug\HorrorOfKI23-10b-1.exe

@@ -8,6 +8,8 @@ class InputController
 
 public:
     std::string sText;
+    int iChose;
+
     InputController(GameMode* _GM);
     void InputInfo();
 
