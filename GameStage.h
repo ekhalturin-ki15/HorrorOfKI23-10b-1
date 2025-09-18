@@ -14,17 +14,18 @@ enum EStage : __int8
 
 class GameStage
 {
-
-
 	std::string sText;
 
-	void SetInfo(std::shared_ptr<Player> ptrPl);
+	void SetInfo(Player* ptrPl);
 
 	public:
     static EStage eStage;
     void GameLoop();
-	std::shared_ptr<GameMode> GM;
+	GameMode* GM;
+
+	void Clear();
+
 
 public:
-    GameStage(std::shared_ptr<GameMode> _GM);
+    GameStage(GameMode* _GM);
 };

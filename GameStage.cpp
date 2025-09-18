@@ -1,5 +1,6 @@
-#include "GameStage.h"
+ï»¿#include "GameStage.h"
 #include "GameMode.h"
+#include "InputController.h"
 #include "Player.h"
 #include <string>
 
@@ -7,17 +8,17 @@
 
 EStage GameStage::eStage = EStage::GameLoop;
 
-GameStage::GameStage(std::shared_ptr<GameMode> _GM) : GM(_GM)
+GameStage::GameStage(GameMode* _GM) : GM(_GM)
 {
 
 
 }
 
-void GameStage::SetInfo(std::shared_ptr<Player> ptrPl)
+void GameStage::SetInfo(Player* ptrPl)
 {
-    sText += "Ó èãðîêà " + ptrPl->name + "\n";
-    sText += "Çäîðîâüå " + std::to_string(ptrPl->hp) + "\n";
-    sText += "Ðàññóäêà " + std::to_string(ptrPl->mind) + "\n";
+    sText += "Ð£ Ð¸Ð³Ñ€Ð¾ÐºÐ° " + ptrPl->sName + "\n";
+    sText += "Ð—Ð´Ð¾Ñ€Ð¾Ð²ÑŒÐµ " + std::to_string(ptrPl->iHp) + "\n";
+    sText += "Ð Ð°ÑÑÑƒÐ´ÐºÐ° " + std::to_string(ptrPl->iMind) + "\n";
     sText += LINE;
 
 }
@@ -27,21 +28,24 @@ void GameStage::GameLoop()
     while (true)
     {
 
-        if ((!GM->ptrPl->hp) || ((!GM->ptrPl->mind)))
+        if ((!GM->ptrPl->iHp) || ((!GM->ptrPl->iMind)))
         {
             eStage = EStage::GameOver;
             break;
         }
-
-
-        sText = "";
-
         SetInfo(GM->ptrPl);
 
-        #ifdef  RED
-            std::cout << sText;
-#endif    //  RED
+        std::cout << sText;
 
+        GM->ptrIC;
+            
 
+        Clear();
     }
+}
+
+void GameStage::Clear()
+{
+    sText = "";
+    GM->ptrIC->sText = "";
 }

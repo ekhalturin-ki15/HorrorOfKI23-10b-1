@@ -6,6 +6,7 @@
 
 class Player;
 class GameStage;
+class InputController;
 
 //friend 
 class GameMode
@@ -15,10 +16,13 @@ class GameMode
 
 public:
 
-    void Init(std::shared_ptr<Player> _ptrPl, 
-        std::shared_ptr<GameStage> _ptrGS);
+    GameMode() = default;
+
+    void Init(Player* _ptrPl, 
+        GameStage* _ptrGS);
     // TSubObject
-    std::shared_ptr<Player>    ptrPl;    // 8 Байт
-    std::shared_ptr<GameStage> ptrGS;
+    Player*    ptrPl;    // 8 Байт
+    GameStage* ptrGS;
+    InputController* ptrIC;
 };
 // ctrl K + ctlr D

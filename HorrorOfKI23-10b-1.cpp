@@ -1,20 +1,24 @@
 ﻿#include "GameMode.h"
 #include "GameStage.h"
+#include "InputController.h"
 #include "Player.h"
 #include <fstream>
 #include <iostream>
 
 using namespace std;
 
-#define PTR(x) std ::shared_ptr<x>
+#define PTR(x) x*
 
 int main()
 {
-    PTR(GameMode) GM;
+    setlocale(LC_ALL, "Russian");
 
-    std::shared_ptr<GameStage> ptrGS  = std::make_shared<GameStage>(GM);
-    PTR(Player) ptrPl  = std::make_shared<Player>(GM, 6, 12, "Jach");
-    PTR(Player) ptrPl2 = std::make_shared<Player>(GM, 10, 7, "Mich");
+    PTR(GameMode) GM   = new GameMode();
+    PTR(Player) ptrPl  = new Player(GM, 6, 12, "Jach");
+    PTR(Player) ptrPl2 = new Player(GM, 10, 7, "Mich");
+    PTR(GameStage) ptrGS = new GameStage(GM);
+    PTR(InputController) ptrIC = new InputController(GM);
+
     GM->Init(ptrPl, ptrGS);
 
 

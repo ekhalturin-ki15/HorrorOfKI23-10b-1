@@ -2,10 +2,10 @@
 #include "GameStage.h"
 #include "Player.h"
 
-void GameMode::Init(std::shared_ptr<Player>    _ptrPl,
-                   std::shared_ptr<GameStage> _ptrGS)
+void GameMode::Init(Player* _ptrPl, GameStage* _ptrGS)
 {
-    ptrPl = //?? move shared_ptrPl;
+    ptrPl = _ptrPl;
     ptrGS = _ptrGS;
+
     ptrGS->GameLoop();
 }

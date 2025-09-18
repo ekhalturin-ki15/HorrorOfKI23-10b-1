@@ -10,12 +10,12 @@ class Player
 public:
 
 
-    Player(std::shared_ptr<GameMode> _GM, int _hp, int _mind, std::string _name);
+    Player(GameMode* _GM, int _hp, int _mind, std::string _name);
 
 
-    int hp;
-    int mind;
-    std::string name;
+    int iHp;
+    int iMind;
+    std::string sName;
 
-    std::shared_ptr<GameMode> GM;
+    GameMode* GM;
 };

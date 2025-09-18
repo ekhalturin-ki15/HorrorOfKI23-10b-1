@@ -1,10 +1,10 @@
 #include "Player.h"
 
-Player::Player(std::shared_ptr<GameMode> _GM, int _hp, int _mind,
+Player::Player(GameMode* _GM, int _hp, int _mind,
                std::string _name)
 
-	: GM(_GM) , hp(_hp)
-    , mind(_mind)
-    , name(_name)
+	: GM(_GM) , iHp(_hp)
+    , iMind(_mind)
+    , sName(_name)
 {
 }

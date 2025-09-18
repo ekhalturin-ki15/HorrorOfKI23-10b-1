@@ -127,6 +127,7 @@
     <ClCompile Include="GameMode.cpp" />
     <ClCompile Include="GameStage.cpp" />
     <ClCompile Include="HorrorOfKI23-10b-1.cpp" />
+    <ClCompile Include="InputController.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="GameMode.h" />
     <ClInclude Include="GameStage.h" />
+    <ClInclude Include="InputController.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
